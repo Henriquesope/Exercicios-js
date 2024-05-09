@@ -18,7 +18,7 @@
 
 // let nota2 = parseInt(prompt("Digite outr nota: "))
 
-// let media = (nota1 + nota2) /2
+let media = (nota1 + nota2) /2
 
 // console.log(media)
 
@@ -40,25 +40,23 @@
 // nome de usuário é &quot;admin&quot; e a senha é &quot;senha123&quot;. Exiba uma mensagem indicando se o login
 // foi bem-sucedido ou não.
 
-// let username = prompt("Digete o seu usuário");
+let username = prompt("Digete o seu usuário");
 
-// let senha = prompt("Digite sua senha");
+let senha = prompt("Digite sua senha");
 
-// if(username == "admin" && senha == "senha123"){
-//     console.log("Login be sucedido!")
-// }
-// else{
-//     console.log ("Voce não tem permissão de acesso!")
-// }
-
-
+if(username == "admin" && senha == "senha123"){
+    console.log("Login be sucedido!")
+}
+else{
+    console.log ("Voce não tem permissão de acesso!")
+}
 
 
 
 
 
-// Exercício 3: Ímpar ou par
-// Faça um programa que receba um número do usuário e informe se este número é par ou
-// ímpar.
+
+
+
 
 
