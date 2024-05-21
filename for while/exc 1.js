@@ -1,5 +1,7 @@
-for (let contador = 1; contador <= 10; contador++) {
+// imprimir numeros de 1 a 10 utilizando o loop for
 
-    console.log(contador);
+for (let num = 1; num <= 10; num++) {
+
+    console.log(num);
     
     }
