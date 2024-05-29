@@ -1,127 +1,150 @@
-// construir um menu que é possivel escolher um exercicioentre os exercicios anteriores, para ser executqadi.
-// Faça com que o menu repita a sua exeução até o usuario digitar sair
+// Construir um menu que é possível escolher um exercicio entre os exercicios anteriores, para ser executado. Faça com que o menu repita a sua execução, disponibilize as opções para o usuário, até que seja digitado "sair"
 
-function exercicioifelse() {
+function exercicioLogin() {
+    let username = prompt("Digite o seu usuário: ");
 
-    let numero = parseInt(prompt("Digite um numero: "))
+    let senha = prompt("Digite sua senha: ");
 
-    if (numero % 2 == 0) {
-        console.log("e par")
-
+    if (username == "admin" && senha == "senha123") {
+        console.log("Login bem sucedido!");
     }
     else {
-        console.log("e impar")
+        console.log("Você não tem permissão de acesso!");
     }
 }
 
-function excifelse2() {
-    let idade = parseFloat(prompt("Digite sua idade:"))
+function numParImpar() {
+    let num = parseInt(prompt("Informe um número inteiro: "));
 
-    if (idade < 18) {
-        console.log("Ë menor de idade")
+    if (num % 2 == 0) {
+        console.log("O número informado é par");
     }
-
     else {
-        console.log("Ë maior de idade")
+        console.log("O número informado é ímpar");
     }
 }
 
-function excifelse3() {
-    let valorTotal = parseFloat(prompt("valor total da compra:"))
+function exercicioTabuada() {
+    let numero = parseInt(prompt("Digite um número para ver na tabuada: "));
 
-    let desconto;
-    if (valor <= 100) {
-        desconto = 0;
-        console.log("O valor do desconto foi: " + desconto)
+
+    if (!isNaN(numero)) {
+        for (let cont = 1; cont <= 10; cont++) {
+            console.log(numero + " X " + cont + " = " + (numero * cont));
+        }
+
+    } else {
+        console.log("Número invalido. Por favor, digite um número válido.")
     }
 
-    else if (valorTotal <= 200) {
-        desconto = 0.1;
-        console.log("O valor do desconto foi: " + (desconto * 100) + "%")
+    console.log(isNaN("Hello World")); // retorna true 
+    console.log(isNaN(123)); // retorna false 
+}
+
+function exercicioNumeroPar (){
+    for(let num = 1; num <=10; num++){
+        if(num%2 == 0){
+            console.log(num);
+        }
     }
-
-    else {
-        desconto = 0.2;
-        console.log("O valor do desconto foi: " + (desconto * 100) + "%")
-    }
-
-    let valorFinal = valorTotal - (valorTotal * desconto);
-}
-
-function excfor1() {
-    for (let num = 1; num <= 10; num++) {
-
-        console.log(num);
-
-    }
-}
-
-function excfor2 () {
-    for (let numero = 2; numero <= 10; numero += 2) {
-        console.log(numero);
-    }
-}
-
-function excfor3 () {
-    let numero = parseInt(prompt("Digite um numero para ver a tabuada"));
-
-if(!isNaN(numero)){
-for(let cont = 1; cont <= 10; cont++){
-    console.log(numero + "x" + cont + "=" + (numero*cont))
-}
-}else{
-    console.log("Numero invalido. Por favor, ")
-}
-
-console.log(isNaN("Helloword"))
-console.log(isNaN(123))
-
-}
-
-function sair (){
-    window.prompt("Digite sair para finalizar o programa")
-}
-
-
-
-let opcao;
-
-
-do{
-    opcao = window.prompt("MENU\nDIgite a opcao desejada:\n\n1 -Exercicio par impar (if else)\n2 -Exercicio Idade (if else)\n3 -Exercicio Desconto (if else)\n4 -Exercicio contagem (for while)\n5 -exercicio (for while)\n6 -exercico tabuada (for while)\n7 -sair  ")
     
-    switch (opcao) {
+    
+    for(let cont = 2; cont <= 10; cont+=2){
+        console.log(cont)
+    }
+}
+
+function exercicioSoma1a100 () {
+    let num = 1;
+let soma = 0;
+
+while(num <= 100){
+    // soma = soma + num;
+    soma += num;
+    console.log(soma)
+    num++;
+}
+
+console.log("A soma dos números de 1 a 100 é: " + soma);
+}
+
+function exercicioFibonnati () {
+    //Inicializar os primeiros dois números da sequência deFibonacci.
+let fib1 = 1;
+let fib2 = 1;
+
+//Imprime os primeiros 10 números da sequência de Fibonacci.
+console.log("Os primeiros 10 números da sequência de Fibonacci são: ");
+console.log(fib1);
+console.log(fib2);
+
+//Itera para calcular e imprimir os próximos 8 números da sequência.
+for(let i = 2; i < 10; i++){
+    let nextFib = fib1 + fib2;
+    console.log(nextFib);
+
+    //Atualizar os valores de fib1 e fib2 para os proximos calculos
+    fib1 = fib2;
+    fib2 = nextFib;
+}
+}
+
+// let opcao;
+
+// do {
+//     opcao = window.prompt("MENU\nDigite a opção desejada:\n\n1 - Exercicio Login\n2 - Exercicio Par ou Impar\n3 - Exercicio Tabuada")
+
+//     console.clear()
+
+//     switch (opcao) {
+//         case "1":
+//             exercicioLogin()
+//             break;
+
+//         case "2":
+//             numParImpar()
+//             break;
+
+//         case "3":
+//             exercicioTabuada()
+//             break;
+
+//         default:
+//             break;
+//     }
+
+// } while (opcao != "sair");
+
+let resposta = window.prompt("MENU\nDigite a opção desejada:\n\n1 - Exercicio Login\n2 - Exercicio Par ou Impar\n3 - Exercicio Tabuada\n 4-exercicio numeros pares\n 5-exercicio soma 1 a 100\n 6-exercicio fibonatti")
+
+while (resposta != "sair" "SAIR" "0") {
+
+    switch (resposta) {
         case "1":
-            exercicioifelse()
+            exercicioLogin()
             break;
-    
-        default:
-            excifelse2()
-            break
-    
+
+        case "2":
+            numParImpar()
+            break;
+
         case "3":
-            excifelse3()
+            exercicioTabuada()
             break;
-            
+
         case "4":
-            excfor1()
-            break
-        
+            exercicioNumeroPar()
+            break;
+
         case "5":
-            excfor2()
-            break
+            exercicioSoma1a100()
+            break;
         
         case "6":
-            excfor3()
-            break
-    
-        case "7":
-            sair()
-            break
-    
+            exercicioFibonnati()
+            break;
     }
-    
 
-}while(opcao != "sair")
-
-
+    resposta = window.prompt("MENU\nDigite a opção desejada:\n\n1 - Exercicio Login\n2 - Exercicio Par ou Impar\n3 - Exercicio Tabuada\n 4-exercicio numeros pares\n 5-exercicio soma 1 a 100\n 6-exercicio fibonatti")
+    console.clear()
+}

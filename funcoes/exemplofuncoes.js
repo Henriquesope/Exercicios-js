@@ -18,10 +18,10 @@ saudacao()
 function somar(num1,  num2, num3) {
     let soma = num1 + num2 +num3
 
- 
+    return soma
 }
 
-let resultado = somar(5, 6, 9)
-let resultado2 = somar(1, 1, 1)
+let resultado = somar(5, 16, 19) //40
+let resultado2 = somar(1, 1, 1) //3
 
 console.log("O resultado é: "  + resultado)
